@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>programmeer technieken opdracht</title>
+</head>
+<body>
+	<form id="form" onsubmit="return false;">
+	    bedrag per stuk<input  type="text" id="userInput" />
+	    <br>
+	    Aantal<input type="text" id="userInput2"/>
+	    <br>
+	    <br>
+	  	<input type="submit" onclick="totaalUitrekenen()" />
+	</form>
+	<p id="test"></p>
+	<script>
+		function totaalUitrekenen(){
+			var bedrag = document.getElementById('userInput').value;
+			var totaal = document.getElementById('userInput2').value;
+			var prijs = bedrag * totaal;
+			document.getElementById('test').innerHTML = prijs;
+		}
+
+	</script>
+</body>
+</html>
