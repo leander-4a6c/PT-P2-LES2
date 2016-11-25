@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>opdracht vierkant</title>
+	<style>
+		#block{
+			background-color: green;
+			transition: width 0.5s,height 0.5s;
+		}
+
+	</style>
+</head>
+<body>
+		<form id="form" onsubmit="return false;">
+	    breedte van het blok:<input  type="text" id="userInput" />
+	    <br>
+	    <br>
+	    lengte van het blok:<input type="text" id="userInput2" />
+	    <input type="submit" onclick="blockVergroten()" />
+	    </form>
+	<div id="block"></div>
+	<script>
+		
+		function blockVergroten(){
+			var breedte = document.getElementById('userInput').value;
+			var lengte = document.getElementById('userInput2').value;
+			document.getElementById('block').style.width = breedte + "px";
+			document.getElementById('block').style.height = lengte + "px";
+			
+		}
+	</script>
+</body>
+</html>
