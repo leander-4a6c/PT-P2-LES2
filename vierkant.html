@@ -6,7 +6,7 @@
 	<style>
 		#block{
 			background-color: green;
-			transition: width 0.5s,height 0.5s;
+			transition: width 0.5s,height 0.5s,background-color 0.5s;
 		}
 
 	</style>
@@ -17,6 +17,9 @@
 	    <br>
 	    <br>
 	    lengte van het blok:<input type="text" id="userInput2" />
+	    <br>
+	    <br>
+	    kleur van het blok:<input  type="text" id="userInput3" />
 	    <input type="submit" onclick="blockVergroten()" />
 	    </form>
 	<div id="block"></div>
@@ -25,8 +28,10 @@
 		function blockVergroten(){
 			var breedte = document.getElementById('userInput').value;
 			var lengte = document.getElementById('userInput2').value;
+			var kleur = document.getElementById('userInput3').value;
 			document.getElementById('block').style.width = breedte + "px";
 			document.getElementById('block').style.height = lengte + "px";
+			document.getElementById('block').style.backgroundColor = kleur;
 			
 		}
 	</script>
